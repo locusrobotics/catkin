@@ -31,8 +31,7 @@ class MockTest(AbstractCatkinWorkspaceTest):
         assert_exists(self.installdir,
                       'env.sh',
                       'setup.sh',
-                      'setup.zsh',
-                      'setup.fish')
+                      'setup.zsh')
 
     def test_linker_options_propagation(self):
         dstdir = os.path.join(self.workspacedir, 'linker_options')
@@ -44,8 +43,7 @@ class MockTest(AbstractCatkinWorkspaceTest):
         assert_exists(self.installdir,
                       'env.sh',
                       'setup.sh',
-                      'setup.zsh',
-                      'setup.fish')
+                      'setup.zsh')
 
     def test_nolang(self):
         dstdir = os.path.join(self.workspacedir, 'nolangs')
