@@ -2,8 +2,8 @@
 Changelog for package catkin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2024-02-02)
+------------------
 * Revert "Add native support to fish shell (#1168)"
   This reverts commit be490b217e66f0a175b48eaa70062976eb67ffd6.
 * Import setuptools before distutils
