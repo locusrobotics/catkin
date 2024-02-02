@@ -2,6 +2,45 @@
 Changelog for package catkin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Revert "Add native support to fish shell (#1168)"
+  This reverts commit be490b217e66f0a175b48eaa70062976eb67ffd6.
+* Import setuptools before distutils
+  Setuptools wants to be imported before distutils, and prints a warning if it
+  is not. Starting with a recent version (>57.2, <=61.2), not following this
+  rule causes catkin's own monkey patching to fail. This commit reverses the
+  import order to fix the warning and patching issue.
+  Comment by v4hn: While this does not actually trigger failures on most systems
+  setuptools clearly documents that setuptools should be included *before* distutils.
+  Co-authored by v4hn <me@v4hn.de>
+* Default to number of usable CPUs if possible (#1180)
+  * Default to number of usable CPUs if possible
+  * Comment improvement
+* Fix non-atomic atomic_configure_file (#1150)
+  * Fix non-atomic atomic_configure_file
+  * Update atomic_configure_file.cmake
+* Fix typo in docstring (#1172)
+* Add native support to fish shell (#1168)
+  * Create setup.fish template file
+  * Create local_setup.fish template file
+  * Add fish to cmake list of shells
+  * Add setup.fish to mock workspace unit test
+  * Improve unit test print output
+  * Improve error message readability
+  Co-authored-by: Geoffrey Biggs <gbiggs@killbots.net>
+  * Remove duplicated test statement
+  * Fix variables export comand syntax
+  * Prevent fish variable misevaluation
+  * Fix call to python setup_util script
+  * Add bash compatibility check
+  * Improve readability setup.sh error message
+  Co-authored-by: Geoffrey Biggs <gbiggs@killbots.net>
+* Update package maintainers (#1157)
+* Fix catkin_install_python(): ignore whitespaces in shebang (#1156)
+* toplevel: minor typo
+* Contributors: Ben Wolsieffer, Felipe Gomes de Melo, G.A. vd. Hoorn, Gašper Simonič, Geoffrey Biggs, Matthijs van der Burgh, Paul Bovbel, wico-silva, zig-for
+
 0.8.10 (2021-04-22)
 -------------------
 * Fix problem with Googletest's LIBRARY_OUTPUT_DIRECTORY (`#1135 <https://github.com/ros/catkin/issues/1135>`_)
