@@ -2,6 +2,9 @@
 Changelog for package catkin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.0 (2024-02-02)
 ------------------
 * Revert "Add native support to fish shell (#1168)"
